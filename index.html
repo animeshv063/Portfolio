@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animesh Verma | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --card-bg: #121217;
+            --primary: #4ade80;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero */
+        header {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .tag {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--primary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero-desc {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 0;
+            border-top: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h2 span {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .skills-list {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            background: rgba(74, 222, 128, 0.1);
+            color: var(--primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--primary);
+            color: var(--bg);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 100px;
+            margin-top: 2rem;
+            opacity: 0.8;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            section { padding: 4rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="hero-content">
+                <span class="tag">Hello, my name is</span>
+                <h1>Animesh Verma.</h1>
+                <p class="hero-desc">
+                    Computer Science student at <strong>KIET Deemed To Be University</strong>. 
+                    Building the future with Java and Kotlin.
+                </p>
+            </div>
+        </header>
+
+        <section id="skills">
+            <h2><span>01.</span> Technical Arsenal</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Java Development</h3>
+                    <p>Expertise in Object-Oriented Programming and building robust backend services.</p>
+                    <div class="skills-list">
+                        <span class="skill-tag">Spring</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">Multi-threading</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Kotlin & Mobile</h3>
+                    <p>Modern mobile development focusing on performance and sleek UI/UX.</p>
+                    <div class="skills-list">
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">Coroutines</span>
+                        <span class="skill-tag">Compose</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Architecture</h3>
+                    <p>Designing scalable systems and managing complex data structures efficiently.</p>
+                    <div class="skills-list">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">System Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2><span>02.</span> Featured Work</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Microservice Hub</h3>
+                    <p>A distributed system for managing high-traffic requests across various service nodes.</p>
+                </div>
+                <div class="card">
+                    <h3>TaskFlow Mobile</h3>
+                    <p>A high-performance task management application built with Kotlin for Android.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <h2>Let's connect</h2>
+            <p>I'm currently looking for new opportunities.</p>
+            <a href="https://mail.google.com/" target="_blank" class="contact-btn">animeshv063@gmail.com</a>
+            <p style="margin-top: 3rem; font-size: 0.8rem; color: var(--text-muted); font-family: 'JetBrains Mono';">
+                © 2026 Animesh Verma
+            </p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
